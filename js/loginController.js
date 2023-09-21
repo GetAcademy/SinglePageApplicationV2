@@ -1,8 +1,9 @@
 function logIn() {
-    if (userNameInput == 'terje' && passwordInput == 'hemmelig') {
-        loggedInAs = 'terje';
+    if (model.inputs.loginPage.userName == 'terje'
+        && model.inputs.loginPage.password == 'hemmelig') {
+        model.app.loggedInAs = 'terje';
     } else {
-        error = 'Ugyldig brukernavn eller passord';
+        model.inputs.loginPage.error = 'Ugyldig brukernavn eller passord';
     }
     updateView();
 }

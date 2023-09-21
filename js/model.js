@@ -1,9 +1,24 @@
 const model = {
     app: {
-
+        loggedInAs: '',
+        currentPage: '',
+        user: {
+            firstName: '',
+            imageUrl: '',
+        },
     },
     inputs: {
-
+        loginPage: {
+            userName: '',
+            password: '',
+            error: '',
+        },
+        profilePage: {
+            firstName: '',
+            imageUrl: '',
+        },
+        mainPage: {
+        },
     },
     themes: [
         {name: 'light', foreColor: 'black', backColor: 'white'},
@@ -11,13 +26,3 @@ const model = {
         {name: 'mix', foreColor: 'white', backColor: 'darkblue'},
     ]
 };
-
-
-
-// let userNameInput;
-// let passwordInput;
-// let loggedInAs = null;
-// let error = null;
-// let currentPage;
-// let firstName = null;
-// let imageUrl = null;

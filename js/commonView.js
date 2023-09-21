@@ -1,4 +1,5 @@
 function createMenuHTML() {
+    const imageUrl = model.app.user.imageUrl;
     let imageHtml = '';
     if (imageUrl != null) {
         imageHtml = `<img src="${imageUrl}" style="width: 50px; height: 50px;"/>`;
@@ -11,13 +12,13 @@ function createMenuHTML() {
     `;
 }
 
-function createInputField(label, modelFieldName, type) {
-    return /*HTML*/`
-        <div>${label}:</div>
-        <input 
-            type="${type}"
-            oninput="${modelFieldName} = this.value" 
-            value="${eval(modelFieldName) || ''}"
-            />
-    `;
-}
+// function createInputField(label, modelFieldName, type) {
+//     return /*HTML*/`
+//         <div>${label}:</div>
+//         <input 
+//             type="${type}"
+//             oninput="${modelFieldName} = this.value" 
+//             value="${eval(modelFieldName) || ''}"
+//             />
+//     `;
+// }

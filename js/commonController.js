@@ -1,9 +1,9 @@
 function goToPage(pageName) {
-    currentPage = pageName;
+    model.app.currentPage = pageName;
     updateView();
 }
 
 function logOut() {
-    loggedInAs = null;
+    model.app.loggedInAs = null;
     updateView();
 }

@@ -5,18 +5,19 @@ function updateViewLogin() {
             <div>Brukernavn:</div>
             <input 
                 type="text"
-                oninput="userNameInput = this.value" 
-                value="${userNameInput || ''}"
+                oninput="model.inputs.loginPage.userName = this.value" 
+                value="${model.inputs.loginPage.userName || ''}"
                 />
             <div>Passord:</div>
             <input 
                 type="password"
-                oninput="passwordInput = this.value" 
+                oninput="model.inputs.loginPage.password = this.value" 
+                value="${model.inputs.loginPage.password || ''}"
                 />
         </div>    
         <button onclick="logIn()">Logg inn</button>
-        <br/>Du er logget inn som ${loggedInAs || '(IKKE)'}
-        <div style="color: red">${error || ''}</div>
+        <br/>Du er logget inn som ${model.app.loggedInAs || '(IKKE)'}
+        <div style="color: red">${model.inputs.loginPage.error || ''}</div>
 
         <button onclick="loggedInAs = 'terje'; updateView()">.</button>
     `;

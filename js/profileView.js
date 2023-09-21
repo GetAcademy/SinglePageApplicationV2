@@ -4,8 +4,18 @@ function updateViewEditProfile() {
         <button onclick="goToPage()">Meny</button>
 
         <div style="display: grid; grid-template-columns: 100px 200px">
-            ${createInputField('Fornavn', 'firstName', 'text')}
-            ${createInputField('Bilde-URL', 'imageUrl', 'text')}
+            <div>Fornavn:</div>
+            <input 
+                type="text"
+                oninput="model.inputs.loginPage.firstName = this.value" 
+                value="${model.inputs.loginPage.firstName || ''}"
+                />
+            <div>${label}:</div>
+            <input 
+                type="text"
+                oninput="model.inputs.loginPage.imageUrl = this.value" 
+                value="${model.inputs.loginPage.imageUrl || ''}"
+                />
         </div>    
         <button onclick="goToPage()">Oppdatere</button>             
     `;

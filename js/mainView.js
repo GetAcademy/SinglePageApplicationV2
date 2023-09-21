@@ -1,4 +1,5 @@
 function updateViewMain() {
+    const firstName = model.app.profile.firstName;
     document.getElementById('app').innerHTML = /*HTML*/`
         <h1>Velkommen${firstName == null ? '!' : ', ' + firstName}<h1>
         ${createMenuHTML()}
