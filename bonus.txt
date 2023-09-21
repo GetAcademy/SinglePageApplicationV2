@@ -1,8 +1,22 @@
-Callbacks, promises, async og await
 API
-Klasser og kompent ved hjelp av arv
+ - Min bok
+ - Eksempel fra min bok, "Eksempel 2 i kapittel 18 - Rest-API": https://github.com/GetAcademy/KodingForAlle/blob/master/eksempler.md
+ - Axios: https://axios-http.com/docs/intro
+ - https://api.chucknorris.io/
+Klasser og komponent ved hjelp av arv
+ - Min bok + moodle
 Vue.js
+ - https://vuejs.org/guide/introduction.html
 Sorteringsfunksjoner
+ - Be om video
 Datastrukturer
+ - kommer noe fra meg
 Rekursjon
+ - kommer noe fra meg
 Funksjonell programmering
+ - Min bok
+ - https://mostly-adequate.gitbook.io/mostly-adequate-guide/
+Callbacks, promises, async og await
+ - https://www.toptal.com/javascript/asynchronous-javascript-async-await-tutorial
+Google Firebase
+ - https://firebase.google.com/
