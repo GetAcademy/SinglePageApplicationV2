@@ -5,127 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/model.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/commonController.js"></script>
+    <script src="js/commonView.js"></script>
+    <script src="js/loginController.js"></script>
+    <script src="js/loginView.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/mainView.js"></script>
+    <script src="js/profileController.js"></script>
+    <script src="js/profileView.js"></script>
 </head>
 
 <body>
     <div id="app"></div>
 
-    <script>
-        // model
-        let userNameInput;
-        let passwordInput;
-        let loggedInAs = null;
-        let error = null;
-        let currentPage;
-        let firstName = null;
-        let imageUrl = null;
+    <!-- 
+        1: Litt om neste uke
+        2: Emne 2-applikasjon: hvordan
+        3: Litt om bonusemner
+     -->
 
-        // view
+    <script>
         updateView();
         function updateView() {
             if (loggedInAs == null) updateViewLogin();
             else if (currentPage == 'editProfile') updateViewEditProfile();
             else updateViewMain();
         }
-
-        function updateViewMain() {
-            document.getElementById('app').innerHTML = /*HTML*/`
-                <h1>Velkommen${firstName == null ? '!' : ', ' + firstName}<h1>
-                ${createMenuHTML()}
-            `;
-        }
-
-        function createMenuHTML() {
-            let imageHtml = '';
-            if (imageUrl != null) {
-                imageHtml = `<img src="${imageUrl}" style="width: 50px; height: 50px;"/>`;
-            }
-            return /*HTML*/`
-                <button onclick="goToPage('editProfile')">Redigere profil</button>
-                <button onclick="logOut()">
-                    ${imageHtml}
-                    Logg ut</button>
-            `;
-        }
-
-        function updateViewEditProfile() {
-            document.getElementById('app').innerHTML = /*HTML*/`
-                <h1>Redigere profil</h1>
-                <button onclick="goToPage()">Meny</button>
-
-                <div style="display: grid; grid-template-columns: 100px 200px">
-                    ${createInputField('Fornavn', 'firstName', 'text')}
-                    ${createInputField('Bilde-URL', 'imageUrl', 'text')}
-                </div>    
-                <button onclick="goToPage()">Oppdatere</button>             
-            `;
-        }
-
-        function createInputField(label, modelFieldName, type) {
-            return /*HTML*/`
-                <div>${label}:</div>
-                <input 
-                    type="${type}"
-                    oninput="${modelFieldName} = this.value" 
-                    value="${eval(modelFieldName) || ''}"
-                    />
-            `;
-        }
-
-
-        function updateViewLogin() {
-            document.getElementById('app').innerHTML = /*HTML*/`
-                <h1>Logg inn</h1>
-                <div style="display: grid; grid-template-columns: 100px 200px">
-                    <div>Brukernavn:</div>
-                    <input 
-                        type="text"
-                        oninput="userNameInput = this.value" 
-                        value="${userNameInput || ''}"
-                        />
-                    <div>Passord:</div>
-                    <input 
-                        type="password"
-                        oninput="passwordInput = this.value" 
-                        />
-                </div>    
-                <button onclick="logIn()">Logg inn</button>
-                <br/>Du er logget inn som ${loggedInAs || '(IKKE)'}
-                <div style="color: red">${error || ''}</div>
-
-                <button onclick="loggedInAs = 'terje'; updateView()">.</button>
-            `;
-        }
-
-        // controller
-        function logIn() {
-            if (userNameInput == 'terje' && passwordInput == 'hemmelig') {
-                loggedInAs = 'terje';
-            } else {
-                error = 'Ugyldig brukernavn eller passord';
-            }
-            updateView();
-        }
-
-        function goToPage(pageName) {
-            currentPage = pageName;
-            updateView();
-        }
-
-        function logOut() {
-            loggedInAs = null;
-            updateView();
-        }
-
     </script>
-
-    <!-- <ol>
-        <li>MVC-innloggingsskjema, inkl. <tt>this</tt></li>
-        <li>SPA - Flere skjermbilder - redigere profil</li>
-        <li>Innebygd for string => tallpuslespill</li>
-    </ol>
-    Og ikke bare det, masse repetisjon på funksjoner med og uten
-    parametre og returverdi! -->
 </body>
 
 </html>
