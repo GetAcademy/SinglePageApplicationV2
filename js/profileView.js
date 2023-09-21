@@ -7,16 +7,16 @@ function updateViewEditProfile() {
             <div>Fornavn:</div>
             <input 
                 type="text"
-                oninput="model.inputs.loginPage.firstName = this.value" 
-                value="${model.inputs.loginPage.firstName || ''}"
+                oninput="model.inputs.profilePage.firstName = this.value" 
+                value="${model.inputs.profilePage.firstName || ''}"
                 />
-            <div>${label}:</div>
+            <div>Bilde:</div>
             <input 
                 type="text"
-                oninput="model.inputs.loginPage.imageUrl = this.value" 
-                value="${model.inputs.loginPage.imageUrl || ''}"
+                oninput="model.inputs.profilePage.imageUrl = this.value" 
+                value="${model.inputs.profilePage.imageUrl || ''}"
                 />
         </div>    
-        <button onclick="goToPage()">Oppdatere</button>             
+        <button onclick="saveProfile()">Oppdatere</button>             
     `;
 }

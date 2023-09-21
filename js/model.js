@@ -1,10 +1,10 @@
 const model = {
     app: {
-        loggedInAs: '',
-        currentPage: '',
+        loggedInAs: null,
+        currentPage: null,
         user: {
-            firstName: '',
-            imageUrl: '',
+            firstName: null,
+            imageUrl: null,
         },
     },
     inputs: {

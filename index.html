@@ -22,7 +22,7 @@
 
     <!-- 
 
-        Pause til 13:
+        Pause til 13:33
 
         1: Litt om neste uke
         2: Emne 2-applikasjon: hvordan
@@ -32,8 +32,8 @@
     <script>
         updateView();
         function updateView() {
-            if (loggedInAs == null) updateViewLogin();
-            else if (currentPage == 'editProfile') updateViewEditProfile();
+            if (model.app.loggedInAs == null) updateViewLogin();
+            else if (model.app.currentPage == 'editProfile') updateViewEditProfile();
             else updateViewMain();
         }
     </script>

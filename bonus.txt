@@ -1,0 +1,8 @@
+Callbacks, promises, async og await
+API
+Klasser og kompent ved hjelp av arv
+Vue.js
+Sorteringsfunksjoner
+Datastrukturer
+Rekursjon
+Funksjonell programmering
